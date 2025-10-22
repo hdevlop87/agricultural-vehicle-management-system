@@ -1,0 +1,15 @@
+meta {
+  name: delete all alerts
+  type: http
+  seq: 25
+}
+
+delete {
+  url: {{baseUrl}}/alerts
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

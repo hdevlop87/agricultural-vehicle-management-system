@@ -1,0 +1,28 @@
+meta {
+  name: Get Current Location
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/trackers/{{trackerId}}/location/current
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get Current Location
+  
+  Retrieves the most recent location data for a specific tracker.
+  
+  ## Path Parameters
+  - id: Tracker ID
+  
+  ## Response
+  - Returns latest location record with coordinates and timestamp
+  - Location format: POINT(longitude latitude)
+}

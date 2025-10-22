@@ -1,0 +1,15 @@
+meta {
+  name: get operator by license number
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/operators/license/{{licenseNumber}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

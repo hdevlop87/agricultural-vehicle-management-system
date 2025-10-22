@@ -1,0 +1,23 @@
+meta {
+  name: update alert
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/alerts/{{alertId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "title": "Updated Alert Title",
+    "message": "Updated alert message with more details",
+    "priority": "high"
+  }
+}

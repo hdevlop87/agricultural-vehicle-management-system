@@ -1,0 +1,15 @@
+meta {
+  name: get refuel by vehicle
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/refuel/vehicle/{{vehicleId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,32 @@
+meta {
+  name: update file entity
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/files/entity/{{fileId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+  content-type: application/json
+}
+
+body:json {
+  {
+    "entityType": "operator",
+    "entityId": "{{operatorId}}"
+  }
+}
+
+tests {
+  test("should update file entity successfully", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody()).to.have.property('data');
+    expect(res.getBody().data).to.have.property('entityType', 'operator');
+    expect(res.getBody()).to.have.property('status', 'success');
+  });
+}

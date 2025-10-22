@@ -1,0 +1,28 @@
+meta {
+  name: Get Tracker By Device ID
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/trackers/device/{{deviceId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get Tracker By Device ID
+  
+  Retrieves a tracker by its unique device ID.
+  
+  ## Path Parameters
+  - deviceId: Unique device identifier
+  
+  ## Response
+  - Returns tracker object with vehicle information
+  - Useful for external device communication
+}

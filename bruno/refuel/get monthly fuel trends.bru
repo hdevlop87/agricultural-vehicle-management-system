@@ -1,0 +1,15 @@
+meta {
+  name: get monthly fuel trends
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/refuel/trends/monthly
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get vehicle fuel efficiency
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{baseUrl}}/refuel/vehicle/{{vehicleId}}/efficiency
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

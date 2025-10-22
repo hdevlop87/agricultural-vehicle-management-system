@@ -1,0 +1,15 @@
+meta {
+  name: get total area
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/fields/total-area
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

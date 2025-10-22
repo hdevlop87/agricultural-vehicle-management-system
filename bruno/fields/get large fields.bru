@@ -1,0 +1,15 @@
+meta {
+  name: get large fields
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/fields/large
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

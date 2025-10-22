@@ -1,0 +1,24 @@
+meta {
+  name: update vehicle
+  type: http
+  seq: 17
+}
+
+put {
+  url: {{baseUrl}}/vehicles/{{vehicleId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "John Deere 6120M Updated",
+    "status": "maintenance",
+    "notes": "Updated vehicle information - scheduled for maintenance",
+    "fuelTankCapacity": "285.0"
+  }
+}

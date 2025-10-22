@@ -1,0 +1,15 @@
+meta {
+  name: update lang
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/users/lang/ar
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: create system alert
+  type: http
+  seq: 31
+}
+
+post {
+  url: {{baseUrl}}/alerts/system
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "message": "Database backup completed successfully. Next backup scheduled for tomorrow at 2:00 AM.",
+    "priority": "low"
+  }
+}

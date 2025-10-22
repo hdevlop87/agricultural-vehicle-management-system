@@ -1,0 +1,15 @@
+meta {
+  name: get maintenances by status
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/maintenances/status/scheduled
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

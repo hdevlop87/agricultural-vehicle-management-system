@@ -1,0 +1,37 @@
+meta {
+  name: upload dangerous file (security test)
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/files
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+  content-type: application/json
+}
+
+body:json {
+  {
+    "file": {
+      "name": "malicious.exe",
+      "type": "application/x-msdownload",
+      "size": 1024000
+    },
+    "entityType": "vehicle",
+    "entityId": "{{vehicleId}}",
+    "isPublic": false
+  }
+}
+
+tests {
+  test("should reject dangerous file type", function() {
+    expect(res.getStatus()).to.equal(400);
+    expect(res.getBody()).to.have.property('message');
+    expect(res.getBody().message).to.include('security');
+  });
+}

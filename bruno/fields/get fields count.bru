@@ -1,0 +1,15 @@
+meta {
+  name: get fields count
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/fields/count
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

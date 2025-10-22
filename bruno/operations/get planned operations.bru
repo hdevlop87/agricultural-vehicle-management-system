@@ -1,0 +1,15 @@
+meta {
+  name: get planned operations
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/operations/planned
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

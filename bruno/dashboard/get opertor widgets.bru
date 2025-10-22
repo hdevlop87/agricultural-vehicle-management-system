@@ -1,0 +1,15 @@
+meta {
+  name: get opertor widgets
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/dashboard/operator/widgets/OP10
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

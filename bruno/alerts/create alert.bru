@@ -1,0 +1,32 @@
+meta {
+  name: create alert
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/alerts
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "type": "maintenance",
+    "title": "Maintenance Due Soon",
+    "message": "Tractor TR001 needs scheduled maintenance in next 20 hours.",
+    "priority": "medium",
+    "vehicleId": "{{vehicleId}}"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    bru.setEnvVar("alertId", responseData.data.id);
+  }
+}

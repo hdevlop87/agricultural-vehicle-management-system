@@ -1,0 +1,15 @@
+meta {
+  name: get vehicles fuel distribution
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/vehicles/analytics/fuel-distribution
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

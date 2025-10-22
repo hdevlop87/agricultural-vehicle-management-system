@@ -1,0 +1,24 @@
+meta {
+  name: update operator
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{baseUrl}}/operators/{{operatorId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "John Smith Updated",
+    "phone": "+1234567891",
+    "hourlyRate": "27.00",
+    "status": "active"
+  }
+}

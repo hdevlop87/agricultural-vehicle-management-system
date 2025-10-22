@@ -1,0 +1,53 @@
+meta {
+  name: Create Tracker
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/trackers
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "deviceId": "TRK-2024-001",
+    "name": "John Deere 8370R Tracker",
+    "vehicleId": "VH01",
+    "status": "active",
+    "manufacturer": "Geotab"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    bru.setEnvVar("trackerId", responseData.data.id);
+    bru.setEnvVar("deviceId", responseData.data.deviceId);
+  }
+}
+
+docs {
+  # Create Tracker
+  
+  Creates a new tracker in the system.
+  
+  ## Required Fields
+  - deviceId: Unique device identifier (must be unique)
+  - name: Human-readable tracker name (min 2 characters)
+  - vehicleId: ID of vehicle to attach tracker to (must exist and not have a tracker)
+  
+  ## Optional Fields
+  - id: Custom tracker ID (auto-generated if not provided)
+  - status: "active" or "inactive" (defaults to "active")
+  - batteryLevel: Integer 0-100 (can be null)
+  
+  ## Response
+  - Returns created tracker object with vehicle information
+  - Automatically sets isOnline to false and timestamps
+}

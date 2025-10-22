@@ -1,0 +1,15 @@
+meta {
+  name: complete maintenance
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/maintenances/{{maintenanceId}}/complete
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

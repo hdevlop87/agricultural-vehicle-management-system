@@ -1,0 +1,15 @@
+meta {
+  name: get user lang
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/users/lang
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

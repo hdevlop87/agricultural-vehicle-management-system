@@ -1,0 +1,61 @@
+meta {
+  name: Seed Trackers
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{baseUrl}}/trackers/seed
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  [
+    {
+      "deviceId": "GPS-001",
+      "name": "Tractor Alpha Tracker",
+      "vehicleId": "TRC001",
+      "status": "active",
+      "batteryLevel": 92
+    },
+    {
+      "deviceId": "GPS-002",
+      "name": "Harvester Beta Tracker",
+      "vehicleId": "HRV001",
+      "status": "active",
+      "batteryLevel": 78
+    },
+    {
+      "deviceId": "GPS-003",
+      "name": "Sprayer Gamma Tracker",
+      "vehicleId": "SPR001",
+      "status": "inactive",
+      "batteryLevel": 15
+    }
+  ]
+}
+
+docs {
+  # Seed Trackers
+  
+  Creates multiple demo trackers for testing and development.
+  
+  ## Request Body
+  - Array of tracker objects to create
+  - Each object should follow the create tracker format
+  - Invalid trackers are skipped (won't fail the entire operation)
+  
+  ## Response
+  - successful: Number of successfully created trackers
+  - total: Total number of trackers in the request
+  - trackers: Array of created tracker objects
+  
+  ## Usage
+  - Perfect for setting up demo data
+  - Continues processing even if some trackers fail validation
+}

@@ -1,0 +1,42 @@
+meta {
+  name: create refuel
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/refuel
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "vehicleId": "{{vehicleId}}",
+    "operatorId": "{{operatorId}}",
+    "datetime": "2025-01-20T14:30:00.000Z",
+    "voucherNumber": "FUEL001",
+    "liters": "85.5",
+    "costPerLiter": "1.45",
+    "totalCost": "123.98",
+    "hoursAtRefuel": "1258.7",
+    "mileageAtRefuel": "15445.2",
+    "fuelLevelAfter": "100",
+    "attendant": "John Doe",
+    "notes": "Full tank refuel after morning operations"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    bru.setEnvVar("refuelId", responseData.data.id);
+    if (responseData.data.voucherNumber) {
+      bru.setEnvVar("voucherNumber", responseData.data.voucherNumber);
+    }
+  }
+}

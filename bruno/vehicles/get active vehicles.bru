@@ -1,0 +1,15 @@
+meta {
+  name: get active vehicles
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/vehicles/active
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

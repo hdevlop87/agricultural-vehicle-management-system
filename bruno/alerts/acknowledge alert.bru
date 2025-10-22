@@ -1,0 +1,15 @@
+meta {
+  name: acknowledge alert
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/alerts/{{alertId}}/acknowledge
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

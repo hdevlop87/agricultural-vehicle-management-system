@@ -1,0 +1,15 @@
+meta {
+  name: get field utilization
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/fields/{{fieldId}}/utilization
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

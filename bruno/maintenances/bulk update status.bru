@@ -1,0 +1,22 @@
+meta {
+  name: bulk update status
+  type: http
+  seq: 16
+}
+
+put {
+  url: {{baseUrl}}/maintenances/bulk/status
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "ids": ["{{maintenanceId}}", "maintenance2", "maintenance3"],
+    "status": "completed"
+  }
+}

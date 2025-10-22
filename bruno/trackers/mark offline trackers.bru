@@ -1,0 +1,38 @@
+meta {
+  name: Mark Offline Trackers
+  type: http
+  seq: 19
+}
+
+put {
+  url: {{baseUrl}}/trackers/offline/mark
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "timeoutMinutes": 30
+  }
+}
+
+docs {
+  # Mark Offline Trackers
+  
+  Automatically marks trackers as offline if they haven't been seen within the timeout period.
+  
+  ## Optional Fields
+  - timeoutMinutes: Minutes of inactivity before marking offline (default: 30)
+  
+  ## Response
+  - markedOffline: Number of trackers marked as offline
+  - cutoffTime: Timestamp used as cutoff for marking offline
+  
+  ## Usage
+  - Useful for maintenance tasks or automated cleanup
+  - Should be run periodically to keep online status accurate
+}

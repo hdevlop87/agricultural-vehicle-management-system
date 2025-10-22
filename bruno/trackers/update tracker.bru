@@ -1,0 +1,22 @@
+meta {
+  name: update tracker
+  type: http
+  seq: 17
+}
+
+put {
+  url: {{baseUrl}}/trackers/{{trackerId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "status": "active",
+    "vehicleId": "VH01"
+  }
+}

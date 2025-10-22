@@ -1,0 +1,15 @@
+meta {
+  name: get alert by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/alerts/{{alertId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

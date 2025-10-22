@@ -1,0 +1,21 @@
+meta {
+  name: update operator status
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{baseUrl}}/operators/{{operatorId}}/status
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "status": "inactive"
+  }
+}

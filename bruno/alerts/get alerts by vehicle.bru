@@ -1,0 +1,15 @@
+meta {
+  name: get alerts by vehicle
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{baseUrl}}/alerts/vehicle/{{vehicleId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

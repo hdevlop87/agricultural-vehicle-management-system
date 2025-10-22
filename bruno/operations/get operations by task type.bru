@@ -1,0 +1,15 @@
+meta {
+  name: get operations by task type
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/operations/task-type/{{operationTypeId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

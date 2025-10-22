@@ -1,0 +1,15 @@
+meta {
+  name: get dashboard summary
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{baseUrl}}/alerts/dashboard
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

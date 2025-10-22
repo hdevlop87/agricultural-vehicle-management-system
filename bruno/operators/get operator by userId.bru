@@ -1,0 +1,15 @@
+meta {
+  name: get operator by userId
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/operators/user/USR01
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

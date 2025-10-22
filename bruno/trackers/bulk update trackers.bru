@@ -1,0 +1,46 @@
+meta {
+  name: Bulk Update Trackers
+  type: http
+  seq: 18
+}
+
+put {
+  url: {{baseUrl}}/trackers/bulk
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "ids": ["TRACK001", "TRACK002", "TRACK003"],
+    "updates": {
+      "status": "active",
+      "isOnline": true
+    }
+  }
+}
+
+docs {
+  # Bulk Update Trackers
+  
+  Updates multiple trackers at once with the same changes.
+  
+  ## Required Fields
+  - ids: Array of tracker IDs to update
+  - updates: Object containing fields to update
+  
+  ## Supported Update Fields
+  - status: "active" or "inactive"
+  - batteryLevel: Integer 0-100 or null
+  - isOnline: Boolean
+  - name: String
+  
+  ## Response
+  - successful: Number of successfully updated trackers
+  - total: Total number of tracker IDs provided
+  - results: Array of updated tracker objects
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Get Offline Trackers
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/trackers/offline
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get Offline Trackers
+  
+  Retrieves all trackers that are currently offline.
+  
+  ## Response
+  - Returns array of offline trackers
+  - Ordered by last seen timestamp (most recent first)
+  - Only includes trackers with status 'active' and isOnline = false
+}

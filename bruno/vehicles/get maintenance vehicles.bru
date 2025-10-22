@@ -1,0 +1,15 @@
+meta {
+  name: get maintenance vehicles
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/vehicles/maintenance
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

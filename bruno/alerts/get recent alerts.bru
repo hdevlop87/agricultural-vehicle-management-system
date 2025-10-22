@@ -1,0 +1,15 @@
+meta {
+  name: get recent alerts
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/alerts/recent
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

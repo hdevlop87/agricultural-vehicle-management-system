@@ -1,0 +1,44 @@
+meta {
+  name: Get Location History
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/trackers/{{trackerId}}/history?limit=50
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 50
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get Location History
+  
+  Retrieves location history for a specific tracker.
+  
+  ## Path Parameters
+  - id: Tracker ID
+  
+  ## Query Parameters
+  - limit (optional): Number of records to return (default: 50)
+  
+  ## Response
+  Returns array of location records with:
+  - id: History entry ID
+  - trackerId: Tracker ID
+  - location: {lat, lng} coordinates
+  - altitude: Elevation in meters (optional)
+  - speed: Speed in km/h (optional)
+  - batteryLevel: Battery percentage (optional)
+  - isMoving: Movement status (optional)
+  - timestamp: ISO timestamp
+  
+  Records ordered by timestamp (newest first)
+}

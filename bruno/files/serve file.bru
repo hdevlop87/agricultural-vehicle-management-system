@@ -1,0 +1,24 @@
+meta {
+  name: serve file
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/files/serve/kAWai_a.jpg
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+tests {
+  test("should serve file with proper headers", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getHeaders()).to.have.property('content-type');
+    expect(res.getHeaders()).to.have.property('content-length');
+    expect(res.getHeaders()).to.have.property('content-disposition');
+  });
+}

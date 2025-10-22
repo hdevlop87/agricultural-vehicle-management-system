@@ -1,0 +1,15 @@
+meta {
+  name: get cancelled operations
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/operations/cancelled
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: assign role
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/users/assign/{{userId}}/a0DaZ
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

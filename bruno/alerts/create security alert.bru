@@ -1,0 +1,23 @@
+meta {
+  name: create security alert
+  type: http
+  seq: 29
+}
+
+post {
+  url: {{baseUrl}}/alerts/security
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "vehicleId": "{{vehicleId}}",
+    "alertType": "unauthorized_movement",
+    "location": "Farm Gate - GPS: 33.6844, -116.2437"
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: delete file by name
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{baseUrl}}/files/{{fileName}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+tests {
+  test("should delete file successfully", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody()).to.have.property('data');
+    expect(res.getBody()).to.have.property('status', 'success');
+  });
+}

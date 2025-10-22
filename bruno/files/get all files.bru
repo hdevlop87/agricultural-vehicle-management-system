@@ -1,0 +1,24 @@
+meta {
+  name: get all files
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/files
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+tests {
+  test("should return files list", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody()).to.have.property('data');
+    expect(res.getBody()).to.have.property('status', 'success');
+    expect(res.getBody()).to.have.property('message');
+  });
+}

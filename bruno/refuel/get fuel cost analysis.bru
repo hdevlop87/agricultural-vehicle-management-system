@@ -1,0 +1,15 @@
+meta {
+  name: get fuel cost analysis
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/refuel/analytics/costs
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

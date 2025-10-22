@@ -1,0 +1,15 @@
+meta {
+  name: get vehicle fuel costs
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{baseUrl}}/refuel/vehicle/{{vehicleId}}/costs
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

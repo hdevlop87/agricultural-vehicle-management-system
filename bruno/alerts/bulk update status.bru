@@ -1,0 +1,22 @@
+meta {
+  name: bulk update status
+  type: http
+  seq: 24
+}
+
+put {
+  url: {{baseUrl}}/alerts/bulk/status
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "ids": ["{{alertId}}", "alert2", "alert3"],
+    "status": "acknowledged"
+  }
+}

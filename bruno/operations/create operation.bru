@@ -1,0 +1,45 @@
+meta {
+  name: create operation
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/operations
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "vehicleId": "VH01",
+    "operatorId": "OP01",
+    "operationType": "equipmentInspection",
+    "fieldId": "FL01",
+    "date": "2025-07-18",
+    "startTime": "08:00:00",
+    "endTime": "16:00:00",
+    "startHours": "1250.5",
+    "startMileage": "15420.8",
+    "weather": "Clear, dry conditions, 18°C",
+    "status": "planned",
+    "notes": "Planned plowing operation for spring preparation"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    bru.setEnvVar("operationId", responseData.data.id);
+    if (responseData.data.fieldId) {
+      bru.setEnvVar("fieldId", responseData.data.fieldId);
+    }
+    if (responseData.data.taskTypeId) {
+      bru.setEnvVar("taskTypeId", responseData.data.taskTypeId);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: remove user role
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{baseUrl}}/users/remove/{{userId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

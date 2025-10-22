@@ -1,0 +1,24 @@
+meta {
+  name: update operation
+  type: http
+  seq: 16
+}
+
+put {
+  url: {{baseUrl}}/operations/{{operationId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "weather": "Partly cloudy, 20°C, light wind",
+    "notes": "Updated operation plan - weather conditions improved",
+    "startTime": "07:30:00",
+    "endTime": "15:30:00"
+  }
+}

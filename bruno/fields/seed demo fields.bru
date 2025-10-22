@@ -1,0 +1,15 @@
+meta {
+  name: seed demo fields
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{baseUrl}}/fields/seed
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

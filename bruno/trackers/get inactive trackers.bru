@@ -1,0 +1,25 @@
+meta {
+  name: Get Inactive Trackers
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/trackers/status/inactive
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get Inactive Trackers
+  
+  Retrieves all trackers with status 'inactive'.
+  
+  ## Response
+  - Returns array of inactive trackers
+  - Ordered by creation date (newest first)
+}

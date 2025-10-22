@@ -1,0 +1,15 @@
+meta {
+  name: dismiss alert
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/alerts/{{alertId}}/dismiss
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

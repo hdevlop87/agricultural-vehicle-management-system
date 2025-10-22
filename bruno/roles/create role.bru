@@ -1,0 +1,27 @@
+meta {
+  name: create role
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/roles
+  body: json
+  auth: none
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "J",
+    "description": 1232131
+  }
+}
+
+script:post-response {
+  const responseData = res.getBody();
+  bru.setEnvVar("roleId", responseData.data.id);
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get operations by date
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/operations/date/{{operationDate}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

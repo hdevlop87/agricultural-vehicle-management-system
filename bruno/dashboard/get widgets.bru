@@ -1,0 +1,15 @@
+meta {
+  name: get widgets
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/dashboard/widgets
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get operations by vehicle
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/operations/vehicle/{{vehicleId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

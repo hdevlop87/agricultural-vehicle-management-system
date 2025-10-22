@@ -1,0 +1,15 @@
+meta {
+  name: get critical alerts
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/alerts/critical
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

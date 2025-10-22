@@ -1,0 +1,15 @@
+meta {
+  name: get operator performance
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/operators/{{operatorId}}/performance
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

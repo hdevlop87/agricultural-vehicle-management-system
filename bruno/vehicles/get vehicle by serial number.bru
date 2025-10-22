@@ -1,0 +1,15 @@
+meta {
+  name: get vehicle by serial number
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/vehicles/serial/{{serialNumber}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

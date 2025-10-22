@@ -1,0 +1,15 @@
+meta {
+  name: delete All fields
+  type: http
+  seq: 17
+}
+
+delete {
+  url: {{baseUrl}}/fields
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

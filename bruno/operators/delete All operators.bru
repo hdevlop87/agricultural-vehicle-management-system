@@ -1,0 +1,15 @@
+meta {
+  name: delete All operators
+  type: http
+  seq: 14
+}
+
+delete {
+  url: {{baseUrl}}/operators
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

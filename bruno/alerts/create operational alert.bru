@@ -1,0 +1,26 @@
+meta {
+  name: create operational alert
+  type: http
+  seq: 30
+}
+
+post {
+  url: {{baseUrl}}/alerts/operational
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "vehicleId": "{{vehicleId}}",
+    "operatorId": "{{operatorId}}",
+    "alertType": "excessive_idle",
+    "details": {
+      "idleTime": "45 minutes"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+meta {
+  name: create field
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/fields
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+    {
+      "id": "FL06",
+      "name": "River Bottom Field",
+      "area": "41.3",
+      "description": "Rich alluvial soil near water source with high productivity potential. Natural moisture retention and protected from prevailing winds."
+    }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    bru.setEnvVar("fieldId", responseData.data.id);
+    bru.setEnvVar("fieldName", responseData.data.name);
+  }
+}

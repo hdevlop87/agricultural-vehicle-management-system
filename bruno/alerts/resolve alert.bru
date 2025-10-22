@@ -1,0 +1,15 @@
+meta {
+  name: resolve alert
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/alerts/{{alertId}}/resolve
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get vehicles status distribution
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/vehicles/analytics/status-distribution
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

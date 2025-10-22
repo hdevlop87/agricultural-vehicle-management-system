@@ -1,0 +1,15 @@
+meta {
+  name: get license expiring operators
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/operators/license-expiring
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

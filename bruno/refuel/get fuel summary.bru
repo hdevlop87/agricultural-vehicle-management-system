@@ -1,0 +1,15 @@
+meta {
+  name: get fuel summary
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/refuel/analytics/summary
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

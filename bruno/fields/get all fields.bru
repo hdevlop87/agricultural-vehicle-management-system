@@ -1,0 +1,15 @@
+meta {
+  name: get all fields
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/fields
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

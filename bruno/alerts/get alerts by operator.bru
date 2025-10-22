@@ -1,0 +1,15 @@
+meta {
+  name: get alerts by operator
+  type: http
+  seq: 23
+}
+
+get {
+  url: {{baseUrl}}/alerts/operator/{{operatorId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

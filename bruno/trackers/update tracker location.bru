@@ -1,0 +1,59 @@
+meta {
+  name: Update Tracker Location
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{baseUrl}}/trackers/device/location
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "deviceId": "TRK-2024-001",
+    "latitude": 33.9425,
+    "longitude": -6.8626,
+    "altitude": 71.2,
+    "speed": 25.5,
+    "batteryLevel": 82,
+    "isMoving": true
+  }
+}
+
+docs {
+  # Update Tracker Location
+  
+  Updates location for both physical trackers and phone trackers.
+  Optimized for frequent updates (every 2 minutes).
+  
+  ## Required Fields
+  - deviceId: Unique device identifier (e.g., "PHONE_OP123" or "HW_TRK001")
+  - latitude: GPS latitude (-90 to 90)
+  - longitude: GPS longitude (-180 to 180)
+  
+  ## Optional Fields (Phone apps can provide these)
+  - altitude: Elevation in meters
+  - speed: Speed in km/h
+  - batteryLevel: Battery percentage (0-100)
+  - isMoving: Movement status (boolean)
+  - accuracy: GPS accuracy in meters
+  - timestamp: ISO timestamp (defaults to server time)
+  
+  ## Response (Lightweight for performance)
+  {
+    "success": true,
+    "trackerId": "TRK123",
+    "timestamp": "2024-01-15T10:30:00Z"
+  }
+  
+  ## Features
+  - Stores full location data in history
+  - Updates tracker online status
+  - Supports both physical GPS and phone apps
+}

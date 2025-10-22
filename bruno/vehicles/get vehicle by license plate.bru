@@ -1,0 +1,15 @@
+meta {
+  name: get vehicle by license plate
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/vehicles/license/{{licensePlate}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

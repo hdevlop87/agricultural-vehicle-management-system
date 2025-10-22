@@ -1,0 +1,15 @@
+meta {
+  name: delete alert
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{baseUrl}}/alerts/{{alertId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

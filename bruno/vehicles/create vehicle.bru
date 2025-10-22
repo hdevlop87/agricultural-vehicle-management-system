@@ -1,0 +1,47 @@
+meta {
+  name: create vehicle
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{baseUrl}}/vehicles
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+    {
+      "id": "VH01",
+      "type": "tractor",
+      "name": "Primary Tractor Alpha",
+      "brand": "John Deere",
+      "model": "8R 410",
+      "year": 2022,
+      "serialNumber": "JD-8R410-2022-001",
+      "licensePlate": "AGR-001",
+      "purchaseDate": "2022-03-15",
+      "purchasePrice": "485000.00",
+      "status": "active",
+      "fuelType": "diesel",
+      "tankCapacity": "800.0",
+      "initialHours": "0.0",
+      "initialMileage": "0.0",
+      "currentHours": "125.5",
+      "currentMileage": "892.3",
+      "notes": "Primary heavy-duty tractor for large field operations. Equipped with GPS guidance and precision farming systems."
+    }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    bru.setEnvVar("vehicleId", responseData.data.id);
+    bru.setEnvVar("serialNumber", responseData.data.serialNumber);
+    bru.setEnvVar("licensePlate", responseData.data.licensePlate);
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get fields by size
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/fields/by-size
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

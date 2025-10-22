@@ -1,0 +1,15 @@
+meta {
+  name: delete all maintenances
+  type: http
+  seq: 18
+}
+
+delete {
+  url: {{baseUrl}}/maintenances
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

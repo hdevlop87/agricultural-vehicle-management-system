@@ -1,0 +1,24 @@
+meta {
+  name: start operation
+  type: http
+  seq: 15
+}
+
+put {
+  url: {{baseUrl}}/operations/{{operationId}}/start
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "startTime": "08:00:00",
+    "startHours": "1250.5",
+    "startMileage": "15420.8",
+    "weather": "Clear morning, temperature 16°C, light breeze"
+  }
+}

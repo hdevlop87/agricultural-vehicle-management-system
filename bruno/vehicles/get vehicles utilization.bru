@@ -1,0 +1,15 @@
+meta {
+  name: get vehicles utilization
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/vehicles/analytics/utilization
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

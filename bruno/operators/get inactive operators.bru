@@ -1,0 +1,15 @@
+meta {
+  name: get inactive operators
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/operators/inactive
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

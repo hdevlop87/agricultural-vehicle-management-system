@@ -1,0 +1,15 @@
+meta {
+  name: delete resolved alerts
+  type: http
+  seq: 26
+}
+
+delete {
+  url: {{baseUrl}}/alerts/resolved
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

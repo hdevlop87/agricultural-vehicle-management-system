@@ -1,0 +1,37 @@
+meta {
+  name: upload oversized file (error test)
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{baseUrl}}/files
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+  content-type: application/json
+}
+
+body:json {
+  {
+    "file": {
+      "name": "large-video.mp4",
+      "type": "video/mp4",
+      "size": 50000000
+    },
+    "entityType": "vehicle",
+    "entityId": "{{vehicleId}}",
+    "isPublic": false
+  }
+}
+
+tests {
+  test("should reject oversized file", function() {
+    expect(res.getStatus()).to.equal(400);
+    expect(res.getBody()).to.have.property('message');
+    expect(res.getBody().message).to.include('size');
+  });
+}

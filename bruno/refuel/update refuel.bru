@@ -1,0 +1,25 @@
+meta {
+  name: update refuel
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/refuel/{{refuelId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "liters": "88.0",
+    "costPerLiter": "1.48",
+    "totalCost": "130.24",
+    "notes": "Updated refuel with correct measurements",
+    "attendant": "Jane Smith"
+  }
+}

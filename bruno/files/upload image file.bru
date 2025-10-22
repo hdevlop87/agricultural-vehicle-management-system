@@ -1,0 +1,41 @@
+meta {
+  name: upload image file
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/files
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:multipart-form {
+  file: @file(./test-files/sample-image.jpg)
+  entityType: vehicle
+  entityId: {{vehicleId}}
+  isPublic: true
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    if (responseData.data) {
+      bru.setEnvVar("imageFileId", responseData.data.id);
+      bru.setEnvVar("imageFileName", responseData.data.name);
+    }
+  }
+}
+
+tests {
+  test("should upload image file successfully", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody().data).to.have.property('category', 'image');
+    expect(res.getBody().data).to.have.property('mimeType', 'image/jpeg');
+    expect(res.getBody().data).to.have.property('isPublic', true);
+  });
+}

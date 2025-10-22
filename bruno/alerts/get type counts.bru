@@ -1,0 +1,15 @@
+meta {
+  name: get type counts
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/alerts/type-counts
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

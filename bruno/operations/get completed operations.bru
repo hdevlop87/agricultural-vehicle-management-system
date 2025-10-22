@@ -1,0 +1,15 @@
+meta {
+  name: get completed operations
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/operations/completed
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

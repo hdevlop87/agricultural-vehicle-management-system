@@ -1,0 +1,26 @@
+meta {
+  name: Get All Trackers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/trackers
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get All Trackers
+  
+  Retrieves all trackers in the system with vehicle information.
+  
+  ## Response
+  - Returns array of tracker objects with vehicle details
+  - Includes online status, battery level, and last seen timestamp
+  - Ordered by creation date (newest first)
+}

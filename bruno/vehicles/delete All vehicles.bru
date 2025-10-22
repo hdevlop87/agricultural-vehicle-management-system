@@ -1,0 +1,15 @@
+meta {
+  name: delete All vehicles
+  type: http
+  seq: 20
+}
+
+delete {
+  url: {{baseUrl}}/vehicles
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

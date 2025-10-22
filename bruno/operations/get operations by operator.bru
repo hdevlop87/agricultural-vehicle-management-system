@@ -1,0 +1,15 @@
+meta {
+  name: get operations by operator
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/operations/today/operator/OP01
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

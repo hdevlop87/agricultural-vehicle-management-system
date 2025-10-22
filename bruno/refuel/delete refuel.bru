@@ -1,0 +1,15 @@
+meta {
+  name: delete refuel
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/refuel/{{refuelId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

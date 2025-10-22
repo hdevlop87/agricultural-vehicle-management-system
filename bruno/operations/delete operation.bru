@@ -1,0 +1,15 @@
+meta {
+  name: delete operation
+  type: http
+  seq: 19
+}
+
+delete {
+  url: {{baseUrl}}/operations/{{operationId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Get Trackers Count
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/trackers/count
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get Trackers Count
+  
+  Returns the total number of trackers in the system.
+  
+  ## Response
+  - count: Total number of trackers
+}

@@ -1,0 +1,36 @@
+meta {
+  name: Update Tracker Status
+  type: http
+  seq: 20
+}
+
+put {
+  url: {{baseUrl}}/api/trackers/{{trackerId}}/status
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "status": "inactive"
+  }
+}
+
+docs {
+  # Update Tracker Status
+  
+  Updates only the status of a specific tracker.
+  
+  ## Path Parameters
+  - id: Tracker ID
+  
+  ## Required Fields
+  - status: "active" or "inactive"
+  
+  ## Response
+  - Returns updated tracker with new status
+}

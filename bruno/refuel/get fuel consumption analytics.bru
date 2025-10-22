@@ -1,0 +1,15 @@
+meta {
+  name: get fuel consumption analytics
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/refuel/analytics/consumption
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get maintenances by type
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/maintenances/type/oil_change
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

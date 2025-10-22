@@ -1,0 +1,15 @@
+meta {
+  name: mark overdue maintenances
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{baseUrl}}/maintenances/mark-overdue
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

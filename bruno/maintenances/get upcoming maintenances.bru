@@ -1,0 +1,15 @@
+meta {
+  name: get upcoming maintenances
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/maintenances/upcoming?withinHours=50
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

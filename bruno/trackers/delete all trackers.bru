@@ -1,0 +1,31 @@
+meta {
+  name: Delete All Trackers
+  type: http
+  seq: 21
+}
+
+delete {
+  url: {{baseUrl}}/trackers
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Delete All Trackers
+  
+  Permanently deletes ALL trackers and their location history.
+  
+  ## Response
+  - deletedCount: Number of trackers deleted
+  - deletedTrackers: Array of deleted tracker objects
+  
+  ## ⚠️ DANGER
+  - This action is irreversible
+  - Deletes ALL trackers in the system
+  - All location history will be permanently lost
+  - Use with extreme caution!
+}

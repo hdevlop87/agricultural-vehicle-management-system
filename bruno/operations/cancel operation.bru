@@ -1,0 +1,21 @@
+meta {
+  name: cancel operation
+  type: http
+  seq: 18
+}
+
+put {
+  url: {{baseUrl}}/operations/{{operationId}}/cancel
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "notes": "Operation cancelled due to unexpected rain. Will reschedule when weather conditions improve."
+  }
+}

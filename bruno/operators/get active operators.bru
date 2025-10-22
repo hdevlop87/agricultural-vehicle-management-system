@@ -1,0 +1,15 @@
+meta {
+  name: get active operators
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/operators/active
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,29 @@
+meta {
+  name: get files by vehicle entity
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/files/entity/vehicle/{{vehicleId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+tests {
+  test("should return files for specific vehicle", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody()).to.have.property('data');
+    expect(res.getBody().data).to.be.an('array');
+    
+    // Check that all returned files belong to the specified vehicle
+    res.getBody().data.forEach(file => {
+      expect(file).to.have.property('entityType', 'vehicle');
+      expect(file).to.have.property('entityId', bru.getEnvVar("vehicleId"));
+    });
+  });
+}

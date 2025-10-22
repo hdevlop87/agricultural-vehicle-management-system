@@ -1,0 +1,26 @@
+meta {
+  name: Get Active Trackers
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/trackers/status/active
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Get Active Trackers
+  
+  Retrieves all trackers with status 'active'.
+  
+  ## Response
+  - Returns array of active trackers
+  - Includes both online and offline trackers with active status
+  - Ordered by creation date (newest first)
+}

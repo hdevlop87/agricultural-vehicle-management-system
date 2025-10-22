@@ -1,0 +1,15 @@
+meta {
+  name: get operations types
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{baseUrl}}/operations/operation-types
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: update maintenance status
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/maintenances/{{maintenanceId}}/status
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "status": "in_progress"
+  }
+}

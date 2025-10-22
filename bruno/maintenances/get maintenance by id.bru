@@ -1,0 +1,15 @@
+meta {
+  name: get maintenance by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/maintenances/{{maintenanceId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: update field
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/fields/{{fieldId}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "North Field Updated",
+    "areaHectares": "26.0",
+    "description": "Updated primary cultivation area with improved drainage system and GPS mapping completed."
+  }
+}

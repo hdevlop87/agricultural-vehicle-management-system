@@ -1,0 +1,15 @@
+meta {
+  name: get alerts by status
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{baseUrl}}/alerts/status/active
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

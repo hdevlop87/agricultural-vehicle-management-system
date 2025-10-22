@@ -1,0 +1,15 @@
+meta {
+  name: get maintenance alerts
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/maintenances/alerts
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

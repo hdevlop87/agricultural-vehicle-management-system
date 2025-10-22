@@ -1,0 +1,15 @@
+meta {
+  name: clear System
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/seed/clear
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

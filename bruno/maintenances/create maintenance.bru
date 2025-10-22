@@ -1,0 +1,38 @@
+meta {
+  name: create maintenance
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/maintenances
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "vehicleId": "{{vehicleId}}",
+    "type": "scheduled",
+    "title": "Regular Service - 500 Hours",
+    "dueHours": "500.0",
+    "cost": "250.00",
+    "scheduledDate": "2026-10-15",
+    "priority": "normal",
+    "partsUsed": "Engine oil, oil filter, air filter",
+    "assignedTo": "John Smith",
+    "completedAt": null,
+    "notes": "Regular maintenance including oil change and filter replacement"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    bru.setEnvVar("maintenanceId", responseData.data.id);
+  }
+}

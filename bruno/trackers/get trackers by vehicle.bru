@@ -1,0 +1,15 @@
+meta {
+  name: get trackers by vehicle
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/trackers/vehicle/{{vehicleId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

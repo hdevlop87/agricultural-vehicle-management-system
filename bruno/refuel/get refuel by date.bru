@@ -1,0 +1,15 @@
+meta {
+  name: get refuel by date
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/refuel/date/{{refuelDate}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

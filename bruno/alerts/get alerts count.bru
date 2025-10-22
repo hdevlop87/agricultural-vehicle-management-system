@@ -1,0 +1,15 @@
+meta {
+  name: get alerts count
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/alerts/count
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

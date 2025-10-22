@@ -1,0 +1,44 @@
+meta {
+  name: upload file
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/files
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:multipart-form {
+  file: @file(C:\Users\pc\Pictures\WhatsApp Image 2025-06-11 at 22.34.25_fe2f92e2.jpg)
+  entityType: vehicle
+  entityId: {{vehicleId}}
+  isPublic: false
+}
+
+script:post-response {
+  if (res.getStatus() === 200) {
+    const responseData = res.getBody();
+    if (responseData.data) {
+      bru.setEnvVar("fileId", responseData.data.id);
+      bru.setEnvVar("fileName", responseData.data.name);
+      bru.setEnvVar("filePath", responseData.data.path);
+    }
+  }
+}
+
+tests {
+  test("should upload file successfully", function() {
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody()).to.have.property('data');
+    expect(res.getBody().data).to.have.property('id');
+    expect(res.getBody().data).to.have.property('name');
+    expect(res.getBody().data).to.have.property('path');
+    expect(res.getBody()).to.have.property('status', 'success');
+  });
+}

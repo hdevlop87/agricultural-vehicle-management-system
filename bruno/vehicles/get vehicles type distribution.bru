@@ -1,0 +1,15 @@
+meta {
+  name: get vehicles type distribution
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/vehicles/analytics/type-distribution
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}

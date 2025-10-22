@@ -1,0 +1,26 @@
+meta {
+  name: complete operation
+  type: http
+  seq: 17
+}
+
+put {
+  url: {{baseUrl}}/operations/{{operationId}}/complete
+  body: json
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "endTime": "16:30:00",
+    "endHours": "1258.5",
+    "endMileage": "15445.2",
+    "areaCovered": "12.5",
+    "weather": "Remained clear throughout the day, final temperature 22°C",
+    "notes": "Successfully completed plowing operation. Field prepared for seeding. No equipment issues."
+  }
+}

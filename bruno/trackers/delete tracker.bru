@@ -1,0 +1,31 @@
+meta {
+  name: Delete Tracker
+  type: http
+  seq: 22
+}
+
+delete {
+  url: {{baseUrl}}/api/trackers/{{trackerId}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{token}}
+}
+
+docs {
+  # Delete Tracker
+  
+  Permanently deletes a tracker and all its location history.
+  
+  ## Path Parameters
+  - id: Tracker ID 
+  
+  ## Response
+  - Returns deleted tracker object
+  
+  ## Warning
+  - This action is irreversible
+  - All location history for this tracker will be deleted
+}
