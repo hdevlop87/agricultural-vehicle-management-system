@@ -1,0 +1,1 @@
+export { useVehiclesLocations } from './useVehiclesLocations';

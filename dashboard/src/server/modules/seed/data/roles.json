@@ -1,0 +1,27 @@
+[
+  {
+    "id": "admin",
+    "name": "Administrator",
+    "description": "Full system access with all administrative privileges including user management, system configuration, and complete data access"
+  },
+  {
+    "id": "manager",
+    "name": "Farm Manager",
+    "description": "Operational management role with access to vehicle assignments, operation planning, and performance reporting"
+  },
+  {
+    "id": "operator",
+    "name": "Vehicle Operator",
+    "description": "Field operator role with access to assigned vehicles, operation logging, and fuel recording"
+  },
+  {
+    "id": "supervisor",
+    "name": "Field Supervisor",
+    "description": "Supervisory role with oversight of field operations, operator management, and equipment coordination"
+  },
+  {
+    "id": "mechanic",
+    "name": "Maintenance Technician",
+    "description": "Technical role focused on vehicle maintenance, repair tracking, and equipment status management"
+  }
+]

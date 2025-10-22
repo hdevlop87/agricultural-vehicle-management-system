@@ -1,0 +1,30 @@
+export const OPERATION_TYPE_VALUES = [
+  'equipmentInspection',
+  'equipmentMaintenance',
+  'facilityWinterization',
+  'snowRemoval',
+  'planningAssessment',
+  'equipmentTransport',
+  'seedPreparation',
+  'soilTesting',
+  'fieldPreparation',
+  'fertilizing',
+  'pesticideApplication',
+  'drainageWork',
+  'seeding',
+  'equipmentCalibration',
+  'planting',
+  'cultivation',
+  'spraying',
+  'fieldAssessment',
+  'mowing',
+  'irrigation',
+  'scouting',
+  'pestControl',
+  'materialTransport',
+  'harvesting',
+  'facilityMaintenance',
+  'yearEndPlanning'
+] as const;
+
+export type OperationType = typeof OPERATION_TYPE_VALUES[number];

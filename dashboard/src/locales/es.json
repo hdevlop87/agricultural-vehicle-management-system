@@ -1,0 +1,1277 @@
+{
+   "languages": {
+      "en": "English",
+      "fr": "Français",
+      "ar": "العربية",
+      "es": "Español"
+   },
+   "auth": {
+      "success": {
+         "login": "Inicio de sesión exitoso",
+         "logout": "Cierre de sesión exitoso",
+         "register": "Registro exitoso. ¡Bienvenido!",
+         "passwordReset": "Restablecimiento de contraseña enviado",
+         "tokenGenerated": "Token de acceso generado exitosamente",
+         "tokenRefreshed": "Token de acceso actualizado exitosamente",
+         "refreshTokenGenerated": "Token de actualización generado exitosamente",
+         "refreshTokenRefreshed": "Token de actualización renovado exitosamente",
+         "authInitialized": "Autenticación inicializada exitosamente"
+      },
+      "errors": {
+         "emailExists": "Ya existe una cuenta con este correo electrónico",
+         "credentialsMissing": "Uno o más campos obligatorios están vacíos",
+         "invalidCredentials": "Credenciales inválidas. Por favor, inténtalo de nuevo",
+         "accessDenied": "Acceso denegado. No tienes permisos para acceder a este recurso",
+         "emailMissing": "Falta el correo electrónico. Por favor, proporciona una dirección de correo",
+         "tokenExpired": "El token de acceso ha expirado. Por favor, actualiza tu token",
+         "tokenVerificationFailed": "Falló la verificación del token de acceso",
+         "tokenMissing": "Falta el token de acceso. Por favor, proporciona un token de acceso",
+         "tokenInvalid": "El token de acceso proporcionado es inválido. Por favor, obtén un token válido",
+         "refreshTokenExpired": "Sesión expirada. Por favor, inicia sesión de nuevo",
+         "refreshTokenVerificationFailed": "Falló la verificación del token de actualización",
+         "refreshTokenMissing": "Falta el token de actualización. Por favor, proporciona un token de actualización",
+         "refreshTokenInvalid": "Token de actualización inválido. Por favor, inicia sesión de nuevo",
+         "authInitFailed": "Falló la inicialización de la autenticación"
+      },
+      "validation": {
+         "emailInvalid": "Formato de dirección de correo electrónico inválido",
+         "passwordMinLength": "La contraseña debe tener al menos 8 caracteres"
+      }
+   },
+   "users": {
+      "success": {
+         "retrieved": "Usuario recuperado exitosamente",
+         "created": "Usuario creado exitosamente",
+         "updated": "Usuario actualizado exitosamente",
+         "deleted": "Usuario eliminado exitosamente",
+         "allDeleted": "Todos los usuarios han sido eliminados"
+      },
+      "errors": {
+         "notFound": "No se encontró ningún usuario con la información proporcionada",
+         "adminRoleNotFound": "Rol de administrador no encontrado",
+         "idExists": "El ID de usuario ya existe"
+      },
+      "validation": {
+         "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+         "emailInvalid": "Formato de dirección de correo electrónico inválido",
+         "passwordMinLength": "La contraseña debe tener al menos 8 caracteres",
+         "passwordConfirmationRequired": "Se requiere confirmación de contraseña",
+         "passwordsDoNotMatch": "Las contraseñas no coinciden",
+         "roleRequired": "Por favor, selecciona un rol válido"
+      },
+      "form": {
+         "fullName": "Nombre Completo",
+         "fullNamePlaceholder": "Introduce el nombre completo",
+         "image": "Imagen",
+         "email": "Dirección de Correo Electrónico",
+         "emailPlaceholder": "Introduce la dirección de correo electrónico",
+         "password": "Contraseña",
+         "passwordPlaceholder": "Introduce la contraseña",
+         "newPassword": "Nueva Contraseña (dejar en blanco para mantener la actual)",
+         "confirmPassword": "Confirmar Contraseña",
+         "confirmPasswordPlaceholder": "Confirmar contraseña",
+         "userRole": "Rol de Usuario"
+      },
+      "roles": {
+         "admin": "Administrador",
+         "user": "Usuario",
+         "moderator": "Moderador"
+      },
+      "dialogs": {
+         "createTitle": "Crear Nuevo Usuario",
+         "createButton": "Crear Usuario",
+         "viewTitle": "Detalles del Usuario",
+         "editTitle": "Editar Usuario",
+         "updateButton": "Actualizar Usuario",
+         "deleteButton": "Eliminar Usuario"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "name": "Nombre",
+         "email": "Correo Electrónico",
+         "role": "Rol",
+         "status": "Estado"
+      },
+      "filters": {
+         "searchByName": "Buscar por nombre...",
+         "searchByEmail": "Buscar por correo electrónico...",
+         "filterByRole": "Filtrar por rol..."
+      }
+   },
+   "roles": {
+      "success": {
+         "retrieved": "Rol recuperado exitosamente",
+         "created": "Rol creado exitosamente",
+         "updated": "Rol actualizado exitosamente",
+         "deleted": "Rol eliminado exitosamente",
+         "allDeleted": "Todos los roles han sido eliminados",
+         "initialized": "Roles inicializados exitosamente",
+         "assignedToUser": "El rol se asignó exitosamente al usuario",
+         "userRolesRetrieved": "Roles de usuario recuperados exitosamente",
+         "usersByRoleRetrieved": "Usuarios para el rol especificado recuperados exitosamente",
+         "userRoleDeleted": "El rol de usuario ha sido eliminado exitosamente"
+      },
+      "errors": {
+         "exists": "El nombre del rol ya está en uso. Por favor, elige otro",
+         "notFound": "Rol no encontrado",
+         "userRoleExists": "El rol especificado para el usuario ya existe",
+         "userRoleNotFound": "El rol especificado para el usuario no fue encontrado"
+      },
+      "form": {
+         "name": "Nombre del Rol",
+         "namePlaceholder": "Introduce el nombre del rol",
+         "description": "Descripción (Opcional)",
+         "descriptionPlaceholder": "Introduce la descripción del rol"
+      },
+      "dialogs": {
+         "createTitle": "Crear Nuevo Rol",
+         "createButton": "Crear Rol",
+         "viewTitle": "Detalles del Rol",
+         "editTitle": "Editar Rol",
+         "updateButton": "Actualizar Rol",
+         "deleteButton": "Eliminar Rol"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "roleName": "Nombre del Rol",
+         "description": "Descripción",
+         "noDescription": "Sin descripción"
+      },
+      "filters": {
+         "searchByName": "Buscar por nombre del rol...",
+         "searchByDescription": "Buscar por descripción..."
+      },
+      "validation": {
+         "nameRequired": "Se requiere un nombre de rol apropiado",
+         "nameMinLength": "El nombre del rol debe tener al menos 2 caracteres"
+      }
+   },
+   "system": {
+      "success": {
+         "demoSeeded": "Sistema de demostración inicializado exitosamente",
+         "dataCleared": "Todos los datos borrados exitosamente",
+         "fieldsSeeded": "Campos inicializados exitosamente",
+         "vehiclesSeeded": "Vehículos inicializados exitosamente",
+         "operatorsSeeded": "Operadores inicializados exitosamente",
+         "operationsSeeded": "Operaciones inicializadas exitosamente",
+         "refuelsSeeded": "Repostajes inicializados exitosamente"
+      },
+      "info": {
+         "seedingStarted": "Iniciando la carga de datos de demostración...",
+         "clearingData": "Borrando todos los datos...",
+         "operationsCleared": "Operaciones borradas",
+         "refuelsCleared": "Repostajes borrados",
+         "operatorsCleared": "Operadores borrados",
+         "vehiclesCleared": "Vehículos borrados",
+         "fieldsCleared": "Campos borrados",
+         "usersCleared": "Usuarios borrados"
+      },
+      "errors": {
+         "seedingDisabled": "La inicialización del sistema está deshabilitada en este entorno",
+         "invalidSeedApiKey": "Clave API de inicialización inválida proporcionada"
+      }
+   },
+   "files": {
+      "success": {
+         "retrieved": "Archivo recuperado exitosamente",
+         "created": "Archivo creado exitosamente",
+         "updated": "Archivo actualizado exitosamente",
+         "deleted": "Archivo eliminado exitosamente",
+         "served": "Archivo servido exitosamente",
+         "streamed": "Archivo transmitido exitosamente"
+      },
+      "errors": {
+         "notFound": "Archivo no encontrado",
+         "nameExists": "Ya existe un archivo con este nombre",
+         "sizeTooLarge": "El tamaño del archivo excede el límite máximo permitido",
+         "typeNotAllowed": "El tipo de archivo no está permitido",
+         "accessDenied": "No tienes permiso para acceder a este archivo",
+         "uploadFailed": "Falló la subida del archivo",
+         "deleteFailed": "Falló la eliminación del archivo",
+         "invalidType": "Tipo de archivo inválido",
+         "tooLarge": "El tamaño del archivo excede el límite máximo permitido",
+         "invalidEntityType": "Tipo de entidad inválido",
+         "entityNotFound": "Entidad no encontrada",
+         "insufficientPermissions": "Permisos insuficientes para acceder a este archivo",
+         "physicalNotFound": "Archivo físico no encontrado en el almacenamiento",
+         "mimeTypeMismatch": "La extensión del archivo no coincide con el tipo de archivo - riesgo de seguridad potencial",
+         "executableNotAllowed": "Los archivos ejecutables no están permitidos por razones de seguridad",
+         "recordNotFound": "Registro de archivo no encontrado en la base de datos para la ruta: {fileAbsPath}",
+         "onlyImagesAllowed": "Solo se permiten archivos de imagen",
+         "invalidImageType": "Tipo de archivo de imagen inválido"
+      }
+   },
+   "vehicles": {
+      "success": {
+         "retrieved": "Vehículo recuperado con éxito",
+         "created": "Vehículo creado con éxito",
+         "updated": "Vehículo actualizado con éxito",
+         "deleted": "Vehículo eliminado con éxito",
+         "allDeleted": "Todos los vehículos han sido eliminados",
+         "statusUpdated": "Estado del vehículo actualizado con éxito",
+         "seeded": "Vehículos de demostración creados con éxito"
+      },
+      "errors": {
+         "notFound": "Vehículo no encontrado",
+         "nameExists": "Ya existe un vehículo con este nombre",
+         "serialExists": "Ya existe un vehículo con este número de serie",
+         "licensePlateExists": "Ya existe un vehículo con esta matrícula",
+         "invalidType": "Tipo de vehículo especificado no válido",
+         "invalidStatus": "Estado de vehículo especificado no válido",
+         "invalidFuelType": "Tipo de combustible especificado no válido",
+         "inUse": "No se puede eliminar el vehículo porque actualmente está en uso en operaciones",
+         "idExists": "El ID del vehículo ya existe",
+         "invalidYear": "El año debe estar entre {{minYear}} y {{currentYear}}",
+         "invalidEngineHours": "Las horas de motor deben ser un número positivo válido",
+         "invalidMileage": "El kilometraje debe ser un número positivo válido",
+         "invalidFuelCapacity": "La capacidad del tanque debe ser un número positivo válido",
+         "invalidPurchasePrice": "El precio de compra debe ser un número positivo válido",
+         "vehiclesInUseCannotDelete": "No se pueden eliminar todos los vehículos. Los siguientes vehículos están en uso: {{vehicleNames}}",
+         "noVehiclesToDelete": "No se encontraron vehículos para eliminar"
+      },
+      "validation": {
+         "nameMinLength": "El nombre del vehículo debe tener al menos 2 caracteres",
+         "brandRequired": "La marca es obligatoria",
+         "modelRequired": "El modelo es obligatorio",
+         "vehicleTypeRequired": "El tipo de vehículo es obligatorio",
+         "brandMinLength": "La marca debe tener al menos 2 caracteres",
+         "modelMinLength": "El modelo debe tener al menos 2 caracteres"
+      },
+      "form": {
+         "vehicleType": "Tipo de Vehículo",
+         "vehicleName": "Nombre del Vehículo",
+         "vehicleNamePlaceholder": "Ingrese el nombre del vehículo",
+         "brand": "Marca",
+         "brandPlaceholder": "Ingrese la marca del vehículo",
+         "model": "Modelo",
+         "modelPlaceholder": "Ingrese el modelo del vehículo",
+         "year": "Año",
+         "yearPlaceholder": "Ingrese el año de fabricación",
+         "status": "Estado",
+         "serialNumber": "Número de Serie",
+         "serialNumberPlaceholder": "Ingrese el número de serie",
+         "licensePlate": "Matrícula",
+         "licensePlatePlaceholder": "Ingrese la matrícula",
+         "purchaseDate": "Fecha de Compra",
+         "purchaseDatePlaceholder": "Seleccione la fecha de compra",
+         "purchasePrice": "Precio de Compra",
+         "purchasePricePlaceholder": "Ingrese el precio de compra",
+         "fuelType": "Tipo de Combustible",
+         "tankCapacity": "Capacidad del Tanque (Litros)",
+         "tankCapacityPlaceholder": "Ingrese la capacidad del tanque",
+         "initialHours": "Horas Iniciales",
+         "initialHoursPlaceholder": "Ingrese las horas iniciales",
+         "initialMileage": "Kilometraje Inicial",
+         "initialMileagePlaceholder": "Ingrese el kilometraje inicial",
+         "notes": "Notas",
+         "notesPlaceholder": "Ingrese notas adicionales (opcional)",
+         "steps": {
+            "basicInfo": "Información Básica",
+            "basicInfoDesc": "Ingrese tipo, nombre, marca y modelo",
+            "identification": "Identificación",
+            "identificationDesc": "Agregue número de serie, matrícula y detalles de compra",
+            "specifications": "Especificaciones",
+            "specificationsDesc": "Configure combustible, capacidad y métricas"
+         }
+      },
+      "dialogs": {
+         "createTitle": "Crear Nuevo Vehículo",
+         "createButton": "Crear Vehículo",
+         "viewTitle": "Detalles del Vehículo",
+         "editTitle": "Editar Vehículo",
+         "updateButton": "Actualizar Vehículo",
+         "deleteButton": "Eliminar Vehículo"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "vehicleName": "Nombre del Vehículo",
+         "type": "Tipo",
+         "brand": "Marca",
+         "model": "Modelo",
+         "year": "Año",
+         "serialNumber": "Número de Serie",
+         "licensePlate": "Matrícula",
+         "purchasePrice": "Precio de Compra",
+         "status": "Estado",
+         "fuelType": "Tipo de Combustible",
+         "tankCapacity": "Capacidad del Tanque",
+         "currentHours": "Horas Actuales",
+         "currentMileage": "Kilometraje Actual",
+         "createdDate": "Fecha de Creación",
+         "lastUpdated": "Última Actualización"
+      },
+      "filters": {
+         "searchByName": "Buscar por nombre de vehículo...",
+         "searchByBrand": "Buscar por marca...",
+         "searchBySerialNumber": "Buscar por número de serie...",
+         "searchByLicensePlate": "Buscar por matrícula...",
+         "searchByType": "Buscar por tipo...",
+         "searchByStatus": "Filtrar por estado..."
+      },
+      "types": {
+         "tractor": "Tractor",
+         "harvester": "Cosechadora",
+         "sprayer": "Pulverizador",
+         "seeder": "Sembradora",
+         "cultivator": "Cultivador",
+         "other": "Otro"
+      },
+      "statuses": {
+         "active": "Activo",
+         "maintenance": "Mantenimiento",
+         "retired": "Retirado"
+      },
+      "fuelTypes": {
+         "diesel": "Diésel",
+         "gasoline": "Gasolina",
+         "electric": "Eléctrico",
+         "hybrid": "Híbrido"
+      },
+      "units": {
+         "liters": "L",
+         "hours": "hrs",
+         "kilometers": "km",
+         "currency": "$"
+      },
+      "charts": {
+         "monthlyMileage": {
+            "title": "Kilometraje Mensual de la Flota",
+            "totalMileage": "Kilómetros Totales",
+            "month": "Mes",
+            "noDataAvailable": "No hay datos de kilometraje disponibles",
+            "errorLoadingData": "Error al cargar los datos de kilometraje"
+         },
+         "status": {
+            "title": "Distribución del Estado de los Vehículos"
+         }
+      }
+   },
+   "operators": {
+      "success": {
+         "retrieved": "Operador recuperado exitosamente",
+         "created": "Operador creado exitosamente",
+         "updated": "Operador actualizado exitosamente",
+         "deleted": "Operador eliminado exitosamente",
+         "allDeleted": "Todos los operadores han sido eliminados",
+         "statusUpdated": "Estado del operador actualizado exitosamente",
+         "seeded": "Operadores de demostración inicializados exitosamente"
+      },
+      "errors": {
+         "notFound": "Operador no encontrado",
+         "employeeIdExists": "Ya existe un operador con este ID de empleado",
+         "licenseExists": "Ya existe un operador con este número de licencia",
+         "emailExists": "Ya existe un operador con este correo electrónico",
+         "invalidStatus": "Estado de operador especificado inválido",
+         "licenseExpired": "La licencia del operador ha expirado",
+         "inUse": "No se puede eliminar el operador ya que está asignado a operaciones",
+         "userIdExists": "El ID de usuario ya existe",
+         "idExists": "El ID del operador ya existe",
+         "invalidCin": "El DNI debe tener un formato válido (8-12 caracteres alfanuméricos)",
+         "invalidHourlyRate": "La tarifa por hora debe ser un número positivo válido",
+         "invalidOperationDate": "La fecha de operación no puede estar en el pasado",
+         "invalidTimeRange": "La hora de fin debe ser posterior a la hora de inicio",
+         "cinExists": "El DNI ya existe. Por favor, usa un DNI diferente",
+         "invalidHireDate": "La fecha de contratación no puede estar en el futuro",
+         "invalidName": "El nombre debe tener al menos 2 caracteres",
+         "operatorsInUseCannotDelete": "No se pueden eliminar todos los operadores. Los siguientes operadores están actualmente en uso: {operatorNames}",
+         "noOperatorsToDelete": "No se encontraron operadores para eliminar"
+      },
+      "validation": {
+         "userIdRequired": "El ID de usuario es obligatorio",
+         "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+         "emailInvalid": "Por favor, introduce una dirección de correo electrónico válida"
+      },
+      "form": {
+         "name": "Usuario",
+         "namePlaceholder": "Introduce el nombre del usuario",
+         "email": "Correo Electrónico",
+         "emailPlaceholder": "Introduce el correo electrónico del usuario",
+         "cin": "DNI",
+         "cinPlaceholder": "Introduce el número de DNI",
+         "phone": "Teléfono",
+         "phonePlaceholder": "Introduce el número de teléfono",
+         "licenseNumber": "Número de Licencia",
+         "licenseNumberPlaceholder": "Introduce el número de licencia",
+         "licenseExpiry": "Caducidad de Licencia",
+         "licenseExpiryPlaceholder": "Selecciona la fecha de caducidad de la licencia",
+         "hireDate": "Fecha de Contratación",
+         "hireDatePlaceholder": "Selecciona la fecha de contratación",
+         "status": "Estado",
+         "hourlyRate": "Tarifa por Hora",
+         "hourlyRatePlaceholder": "Introduce la tarifa por hora",
+         "steps": {
+            "personalInfo": "Personal",
+            "personalInfoDesc": "Introduce los detalles personales del operador",
+            "licenseInfo": "Licencia",
+            "licenseInfoDesc": "Proporciona los detalles de la licencia",
+            "employmentDetails": "Empleo",
+            "employmentDetailsDesc": "Establece los detalles del empleo"
+         }
+      },
+      "status": {
+         "active": "Activo",
+         "inactive": "Inactivo",
+         "suspended": "Suspendido"
+      },
+      "dialogs": {
+         "createTitle": "Crear Nuevo Operador",
+         "createButton": "Crear Operador",
+         "viewTitle": "Detalles del Operador",
+         "editTitle": "Editar Operador",
+         "updateButton": "Actualizar Operador",
+         "deleteButton": "Eliminar Operador"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "operatorName": "Nombre del Operador",
+         "cin": "DNI",
+         "phone": "Teléfono",
+         "licenseNumber": "Número de Licencia",
+         "licenseExpiry": "Caducidad de Licencia",
+         "hireDate": "Fecha de Contratación",
+         "hourlyRate": "Tarifa por Hora",
+         "status": "Estado"
+      },
+      "filters": {
+         "searchByName": "Buscar por nombre del operador...",
+         "searchByCin": "Buscar por DNI...",
+         "searchByPhone": "Buscar por teléfono...",
+         "searchByLicenseNumber": "Buscar por número de licencia..."
+      }
+   },
+   "operationTypes": {
+      "success": {
+         "retrieved": "Tipo de operación recuperado exitosamente",
+         "allRetrieved": "Todos los tipos de operación recuperados exitosamente",
+         "created": "Tipo de operación creado exitosamente",
+         "updated": "Tipo de operación actualizado exitosamente",
+         "deleted": "Tipo de operación eliminado exitosamente",
+         "allDeleted": "Todos los tipos de operación han sido eliminados"
+      },
+      "errors": {
+         "notFound": "Tipo de operación no encontrado",
+         "nameExists": "Ya existe un tipo de operación con este nombre",
+         "inUse": "No se puede eliminar el tipo de operación ya que se está usando en operaciones"
+      },
+      "validation": {
+         "nameMinLength": "El nombre de la operación debe tener al menos 2 caracteres"
+      },
+      "types": {
+         "equipmentInspection": "Inspección de Equipos",
+         "equipmentMaintenance": "Mantenimiento de Equipos",
+         "facilityWinterization": "Preparación Invernal de Instalaciones",
+         "snowRemoval": "Retirada de Nieve",
+         "planningAssessment": "Evaluación de Planificación",
+         "equipmentTransport": "Transporte de Equipos",
+         "seedPreparation": "Preparación de Semillas",
+         "soilTesting": "Análisis de Suelo",
+         "fieldPreparation": "Preparación del Campo",
+         "fertilizing": "Fertilización",
+         "pesticideApplication": "Aplicación de Pesticidas",
+         "drainageWork": "Trabajos de Drenaje",
+         "seeding": "Siembra",
+         "equipmentCalibration": "Calibración de Equipos",
+         "planting": "Plantación",
+         "cultivation": "Cultivo",
+         "spraying": "Pulverización",
+         "fieldAssessment": "Evaluación del Campo",
+         "mowing": "Siega",
+         "irrigation": "Riego",
+         "scouting": "Exploración",
+         "pestControl": "Control de Plagas",
+         "materialTransport": "Transporte de Materiales",
+         "harvesting": "Cosecha",
+         "facilityMaintenance": "Mantenimiento de Instalaciones",
+         "yearEndPlanning": "Planificación de Fin de Año"
+      }
+   },
+   "fields": {
+      "success": {
+         "retrieved": "Campo recuperado exitosamente",
+         "created": "Campo creado exitosamente",
+         "updated": "Campo actualizado exitosamente",
+         "deleted": "Campo eliminado exitosamente",
+         "allDeleted": "Todos los campos han sido eliminados",
+         "seeded": "Campos de demostración inicializados exitosamente"
+      },
+      "errors": {
+         "notFound": "Campo no encontrado",
+         "nameExists": "Ya existe un campo con este nombre",
+         "inUse": "No se puede eliminar el campo ya que se está usando en operaciones",
+         "invalidArea": "Área de campo especificada inválida",
+         "idExists": "El ID del campo ya existe",
+         "areaTooLarge": "El área del campo parece demasiado grande (>1000 hectáreas). Por favor, verifica",
+         "areaTooSmall": "El área del campo parece demasiado pequeña (<0,1 hectáreas). Por favor, verifica",
+         "nameMinLength": "El nombre del campo debe tener al menos 2 caracteres",
+         "nameMaxLength": "El nombre del campo debe tener menos de 100 caracteres",
+         "invalidName": "El nombre del campo solo puede contener letras, números, espacios, guiones, guiones bajos y puntos",
+         "descriptionTooLong": "La descripción debe tener menos de 500 caracteres",
+         "invalidDateRange": "La fecha de fin debe ser posterior a la fecha de inicio",
+         "dateRangeTooFuture": "La fecha de inicio no puede ser más de un año en el futuro",
+         "cannotDeleteWithHistory": "No se puede eliminar el campo con datos históricos de operaciones. Considera archivarlo en su lugar",
+         "noFieldsToUpdate": "Se debe proporcionar al menos un campo para actualizar",
+         "fieldsInUseCannotDelete": "No se pueden eliminar todos los campos. Los siguientes campos están actualmente en uso: {fieldNames}",
+         "noFieldsToDelete": "No se encontraron campos para eliminar"
+      },
+      "validation": {
+         "nameMinLength": "El nombre del campo debe tener al menos 2 caracteres"
+      },
+      "form": {
+         "name": "Nombre del Campo",
+         "namePlaceholder": "Introduce el nombre del campo",
+         "area": "Área (Hectáreas)",
+         "areaPlaceholder": "Introduce el área en hectáreas",
+         "description": "Descripción",
+         "descriptionPlaceholder": "Introduce la descripción del campo (opcional)"
+      },
+      "dialogs": {
+         "createTitle": "Crear Nuevo Campo",
+         "createButton": "Crear Campo",
+         "viewTitle": "Detalles del Campo",
+         "editTitle": "Editar Campo",
+         "updateButton": "Actualizar Campo",
+         "deleteButton": "Eliminar Campo"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "name": "Nombre del Campo",
+         "area": "Área (Hectáreas)",
+         "description": "Descripción",
+         "createdDate": "Fecha de Creación",
+         "lastUpdated": "Última Actualización",
+         "noDescription": "Sin descripción"
+      },
+      "filters": {
+         "searchByName": "Buscar por nombre del campo...",
+         "searchByArea": "Buscar por área...",
+         "searchByDescription": "Buscar por descripción..."
+      },
+      "units": {
+         "hectares": "ha"
+      },
+      "charts": {
+         "utilization": {
+            "title": "Utilización de Vehículos",
+            "titleDetailed": "Recuento de Operaciones y Utilización de Vehículos",
+            "errorLoading": "Error al cargar los datos de utilización",
+            "noData": "No hay datos de utilización disponibles",
+            "totalOperations": "Operaciones Totales",
+            "vehicleLabel": "Vehículo"
+         },
+         "types": {
+            "title": "Distribución de Tipos de Vehículos",
+            "errorLoading": "Error al cargar los datos de tipos",
+            "noData": "No hay datos de tipos disponibles"
+         },
+         "status": {
+            "title": "Distribución de Estados de Vehículos"
+         }
+      }
+   },
+   "operations": {
+      "success": {
+         "retrieved": "Operación recuperada exitosamente",
+         "allRetrieved": "Todas las operaciones recuperadas exitosamente",
+         "created": "Operación creada exitosamente",
+         "updated": "Operación actualizada exitosamente",
+         "deleted": "Operación eliminada exitosamente",
+         "allDeleted": "Todas las operaciones han sido eliminadas",
+         "statusUpdated": "Estado de la operación actualizado exitosamente",
+         "started": "Operación iniciada exitosamente",
+         "completed": "Operación completada exitosamente",
+         "cancelled": "Operación cancelada exitosamente"
+      },
+      "errors": {
+         "notFound": "Operación no encontrada",
+         "invalidStatus": "Estado de operación especificado inválido",
+         "alreadyStarted": "La operación ya ha sido iniciada",
+         "alreadyCompleted": "La operación ya ha sido completada",
+         "alreadyCancelled": "La operación ya ha sido cancelada",
+         "vehicleNotAvailable": "El vehículo no está disponible para el período de tiempo especificado",
+         "operatorNotAvailable": "El operador no está disponible para el período de tiempo especificado",
+         "invalidEngineHours": "Las horas de fin del motor deben ser mayores que las horas de inicio",
+         "invalidMileage": "El kilometraje de fin debe ser mayor que el kilometraje de inicio",
+         "invalidDate": "La fecha de operación no puede estar en el futuro",
+         "timeConflict": "El horario de la operación entra en conflicto con operaciones existentes",
+         "durationTooLong": "La duración de la operación no puede exceder 18 horas en un solo día",
+         "engineHoursDifferenceTooLarge": "La diferencia de horas del motor no puede exceder 18 horas en una sola operación",
+         "cannotStartFutureOperation": "No se pueden iniciar operaciones programadas con más de 7 días de antelación",
+         "missingStartData": "La operación debe tener hora de inicio y horas de inicio para ser completada",
+         "cannotDeleteActiveOperation": "No se pueden eliminar operaciones activas. Cancela la operación primero",
+         "cannotDeleteOldOperation": "No se pueden eliminar operaciones completadas de más de 30 días de antigüedad",
+         "cannotUpdateCompletedOperation": "No se pueden actualizar operaciones completadas excepto las notas",
+         "operationTypeMaxLength": "El tipo de operación debe tener menos de 100 caracteres"
+      },
+      "validation": {
+         "vehicleRequired": "El vehículo es obligatorio",
+         "operatorRequired": "El operador es obligatorio",
+         "typeRequired": "El tipo de operación es obligatorio",
+         "dateRequired": "La fecha de operación es obligatoria",
+         "startHoursRequired": "Las horas de inicio del motor son obligatorias",
+         "engineHoursProgression": "Las horas de fin del motor deben ser mayores que las horas de inicio",
+         "mileageProgression": "El kilometraje de fin debe ser mayor que el kilometraje de inicio",
+         "engineHoursTooHigh": "Las horas del motor parecen demasiado altas (>50.000 horas)",
+         "mileageTooHigh": "La diferencia de kilometraje es inusualmente alta para una sola operación (>500)",
+         "operationTypeRequired": "El tipo de operación es obligatorio"
+      },
+      "form": {
+         "vehicle": "Vehículo",
+         "vehiclePlaceholder": "Selecciona un vehículo",
+         "operator": "Operador",
+         "operatorPlaceholder": "Selecciona un operador",
+         "operationType": "Tipo de Operación",
+         "operationTypePlaceholder": "Selecciona el tipo de operación",
+         "field": "Campo",
+         "fieldPlaceholder": "Selecciona un campo",
+         "date": "Fecha",
+         "datePlaceholder": "Selecciona la fecha de operación",
+         "status": "Estado",
+         "statusPlaceholder": "Selecciona el estado",
+         "startTime": "Hora de Inicio",
+         "startTimePlaceholder": "Selecciona la hora de inicio",
+         "endTime": "Hora de Fin",
+         "endTimePlaceholder": "Selecciona la hora de fin",
+         "startHours": "Horas de Inicio",
+         "startHoursPlaceholder": "Introduce las horas de inicio",
+         "endHours": "Horas de Fin",
+         "endHoursPlaceholder": "Introduce las horas de fin",
+         "startMileage": "Kilometraje de Inicio",
+         "startMileagePlaceholder": "Introduce el kilometraje de inicio",
+         "endMileage": "Kilometraje de Fin",
+         "endMileagePlaceholder": "Introduce el kilometraje de fin",
+         "areaCovered": "Área Cubierta (ha)",
+         "areaCoveredPlaceholder": "Introduce el área cubierta",
+         "weather": "Tiempo",
+         "weatherPlaceholder": "Introduce las condiciones meteorológicas",
+         "notes": "Notas",
+         "notesPlaceholder": "Introduce notas de la operación (opcional)",
+         "steps": {
+            "basicInfo": "Resumen",
+            "basicInfoDesc": "Asignar vehículo & operador",
+            "scheduleStatus": "Programación",
+            "scheduleStatusDesc": "Establecer fecha, horarios y estado",
+            "metricsDetails": "Métricas",
+            "metricsDetailsDesc": "Registrar horas, kilometraje...."
+         }
+      },
+      "status": {
+         "planned": "Planificado",
+         "active": "Activo",
+         "completed": "Completado",
+         "cancelled": "Cancelado"
+      },
+      "dialogs": {
+         "createTitle": "Crear Nueva Operación",
+         "createButton": "Crear Operación",
+         "viewTitle": "Detalles de la Operación",
+         "editTitle": "Editar Operación",
+         "updateButton": "Actualizar Operación",
+         "deleteButton": "Eliminar Operación",
+         "deleteConfirmation": "operación"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "operationType": "Tipo de Operación",
+         "vehicle": "Vehículo",
+         "operatorName": "Nombre del Operador",
+         "field": "Campo",
+         "date": "Fecha",
+         "startTime": "Hora de Inicio",
+         "startHours": "Horas de Inicio",
+         "status": "Estado"
+      },
+      "filters": {
+         "searchByOperationType": "Buscar por tipo de operación...",
+         "searchByVehicle": "Buscar por vehículo...",
+         "searchByOperator": "Buscar por operador...",
+         "searchByField": "Buscar por campo..."
+      },
+      "card": {
+         "assignmentInfo": "Información de Asignación"
+      }
+   },
+   "fuelRecords": {
+      "success": {
+         "retrieved": "Registro de combustible recuperado exitosamente",
+         "allRetrieved": "Todos los registros de combustible recuperados exitosamente",
+         "created": "Registro de combustible creado exitosamente",
+         "updated": "Registro de combustible actualizado exitosamente",
+         "deleted": "Registro de combustible eliminado exitosamente",
+         "allDeleted": "Todos los registros de combustible han sido eliminados"
+      },
+      "errors": {
+         "notFound": "Registro de combustible no encontrado",
+         "voucherExists": "Ya existe un registro de combustible con este número de vale",
+         "invalidQuantity": "Cantidad de combustible especificada inválida",
+         "invalidCost": "Coste de combustible especificado inválido",
+         "levelInvalid": "El nivel de combustible debe estar entre 0 y 100 por ciento",
+         "dateInvalid": "La fecha de repostaje no puede estar en el futuro"
+      },
+      "validation": {
+         "vehicleRequired": "El vehículo es obligatorio",
+         "operatorRequired": "El operador es obligatorio",
+         "datetimeRequired": "La fecha y hora de repostaje son obligatorias",
+         "litersRequired": "La cantidad de combustible es obligatoria"
+      }
+   },
+   "refuels": {
+      "success": {
+         "retrieved": "Datos de repostaje recuperados exitosamente",
+         "created": "Registro de repostaje creado exitosamente",
+         "updated": "Registro de repostaje actualizado exitosamente",
+         "deleted": "Registro de repostaje eliminado exitosamente",
+         "allDeleted": "Todos los registros de repostaje han sido eliminados"
+      },
+      "errors": {
+         "notFound": "Registro de repostaje no encontrado",
+         "voucherExists": "Ya existe un registro de repostaje con este número de vale",
+         "invalidQuantity": "Cantidad de combustible especificada inválida",
+         "invalidCost": "Coste de combustible especificado inválido",
+         "levelInvalid": "El nivel de combustible debe estar entre 0 y 100 por ciento",
+         "dateInvalid": "La fecha de repostaje no puede estar en el futuro",
+         "dateRequired": "La fecha es obligatoria",
+         "invalidDateFormat": "Formato de fecha inválido",
+         "endDateAfterStart": "La fecha de fin debe ser posterior a la fecha de inicio",
+         "datetimeRequired": "La fecha y hora de repostaje son obligatorias",
+         "invalidDatetimeFormat": "Formato de fecha y hora inválido",
+         "dateOldLimit": "La fecha de repostaje no puede ser de hace más de un año",
+         "quantityRequired": "La cantidad de combustible es obligatoria",
+         "quantityTooHigh": "La cantidad de combustible parece demasiado alta (>1000 litros)",
+         "quantityTooLow": "La cantidad de combustible parece demasiado pequeña (<1 litro)",
+         "costTooHigh": "El coste del combustible por litro parece demasiado alto (>10)",
+         "totalCostNegative": "El coste total debe ser un número positivo",
+         "totalCostMismatch": "El coste total no coincide con cantidad × coste por litro",
+         "engineHoursNegative": "Las horas del motor deben ser un número positivo",
+         "engineHoursTooHigh": "Las horas del motor parecen demasiado altas",
+         "mileageNegative": "El kilometraje debe ser un número positivo",
+         "voucherTooLong": "El número de vale debe tener menos de 50 caracteres",
+         "voucherInvalidChars": "El número de vale solo puede contener letras, números, guiones y guiones bajos",
+         "attendantTooLong": "El nombre del encargado debe tener menos de 100 caracteres"
+      },
+      "form": {
+         "vehicle": "Vehículo",
+         "vehiclePlaceholder": "Selecciona un vehículo",
+         "operator": "Operador",
+         "operatorPlaceholder": "Selecciona un operador",
+         "datetime": "Fecha y Hora",
+         "datetimePlaceholder": "Selecciona la fecha de repostaje",
+         "voucherNumber": "Número de Vale",
+         "voucherNumberPlaceholder": "Introduce el número de vale",
+         "liters": "Litros",
+         "litersPlaceholder": "Introduce la cantidad de combustible en litros",
+         "costPerLiter": "Coste por Litro",
+         "costPerLiterPlaceholder": "Introduce el coste por litro",
+         "fuelLevelAfter": "Nivel de Combustible Después (%)",
+         "fuelLevelAfterPlaceholder": "Introduce el porcentaje de nivel de combustible",
+         "hoursAtRefuel": "Horas en el Repostaje",
+         "hoursAtRefuelPlaceholder": "Introduce las horas del vehículo",
+         "mileageAtRefuel": "Kilometraje en el Repostaje",
+         "mileageAtRefuelPlaceholder": "Introduce el kilometraje del vehículo",
+         "attendant": "Encargado",
+         "attendantPlaceholder": "Introduce el nombre del encargado",
+         "notes": "Notas",
+         "notesPlaceholder": "Introduce notas del repostaje (opcional)",
+         "steps": {
+            "basicInfo": "Info Básica",
+            "basicInfoDesc": "Seleccionar vehículo, operador y fecha",
+            "fuelDetails": "Detalles Combustible",
+            "fuelDetailsDesc": "Introducir cantidad, coste y nivel",
+            "metricsNotes": "Métricas y Notas",
+            "metricsNotesDesc": "Registrar horas, kilometraje y notas"
+         }
+      },
+      "dialogs": {
+         "createTitle": "Crear Nuevo Registro de Repostaje",
+         "createButton": "Crear Registro de Repostaje",
+         "viewTitle": "Detalles del Registro de Repostaje",
+         "editTitle": "Editar Registro de Repostaje",
+         "updateButton": "Actualizar Registro de Repostaje",
+         "deleteButton": "Eliminar Registro de Repostaje",
+         "deleteConfirmation": "Registro de repostaje para"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "vehicle": "Vehículo",
+         "operatorName": "Nombre del Operador",
+         "datetime": "Fecha y Hora",
+         "voucherNumber": "Nº de Vale",
+         "liters": "Litros",
+         "totalCost": "Coste Total",
+         "hours": "Horas",
+         "mileage": "Kilometraje",
+         "attendant": "Encargado"
+      },
+      "filters": {
+         "searchByVehicle": "Buscar por vehículo...",
+         "searchByOperator": "Buscar por operador...",
+         "searchByVoucherNumber": "Buscar por número de vale...",
+         "searchByAttendant": "Buscar por encargado..."
+      },
+      "validation": {
+         "vehicleRequired": "El vehículo es obligatorio",
+         "operatorRequired": "El operador es obligatorio",
+         "datetimeRequired": "La fecha y hora son obligatorias",
+         "litersRequired": "Los litros son obligatorios"
+      },
+      "units": {
+         "liters": "L",
+         "hours": "h",
+         "kilometers": "km"
+      },
+      "charts": {
+         "fuelCostAnalysis": {
+            "title": "Análisis de Costes de Combustible",
+            "costByVehicleType": "Coste por Tipo de Vehículo",
+            "errorLoadingData": "Error al cargar los datos de costes",
+            "noDataAvailable": "No hay datos de costes disponibles",
+            "totalCost": "Coste Total",
+            "vehicleType": "Tipo de Vehículo"
+         },
+         "fuelTrends": {
+            "title": "Tendencias Mensuales de Combustible",
+            "errorLoadingData": "Error al cargar los datos",
+            "noDataAvailable": "No hay datos disponibles",
+            "totalLiters": "Litros Totales",
+            "totalCost": "Coste Total (€)",
+            "refuelCount": "Número de Repostajes"
+         }
+      }
+   },
+   "trackers": {
+      "success": {
+         "retrieved": "Localizador recuperado exitosamente",
+         "created": "Localizador creado exitosamente",
+         "updated": "Localizador actualizado exitosamente",
+         "deleted": "Localizador eliminado exitosamente",
+         "locationUpdated": "Ubicación del localizador actualizada exitosamente",
+         "bulkUpdated": "Localizadores actualizados en lote exitosamente",
+         "seeded": "Localizadores de demostración inicializados exitosamente"
+      },
+      "errors": {
+         "notFound": "Localizador no encontrado",
+         "deviceNotFound": "Dispositivo localizador no encontrado",
+         "cannotUpdateLocationInactiveTracker": "No se puede actualizar la ubicación de un localizador inactivo",
+         "invalidBulkIds": "IDs de localizador inválidos proporcionados para la operación en lote",
+         "deviceIdRequired": "El ID del dispositivo es obligatorio",
+         "invalidDeviceIdFormat": "El formato del ID del dispositivo es inválido. Solo se permiten caracteres alfanuméricos, guiones y guiones bajos",
+         "deviceIdExists": "Ya existe un localizador con este ID de dispositivo",
+         "vehicleRequired": "El vehículo es obligatorio",
+         "vehicleAlreadyHasTracker": "Este vehículo ya tiene un localizador activo asignado",
+         "invalidStatus": "Estado de localizador especificado inválido",
+         "locationRequired": "Los datos de ubicación son obligatorios",
+         "invalidLatitude": "Valor de latitud inválido. Debe estar entre -90 y 90",
+         "invalidLongitude": "Valor de longitud inválido. Debe estar entre -180 y 180",
+         "invalidLocationFormat": "Formato de ubicación inválido. Debe ser JSON válido con latitud y longitud",
+         "invalidBatteryLevel": "Nivel de batería inválido. Debe estar entre 0 y 100"
+      },
+      "form": {
+         "deviceId": "ID del Dispositivo",
+         "deviceIdPlaceholder": "Introduce el ID único del dispositivo",
+         "name": "Nombre del Localizador",
+         "namePlaceholder": "Introduce el nombre del localizador",
+         "vehicle": "Vehículo",
+         "vehiclePlaceholder": "Seleccionar Vehículo",
+         "status": "Estado",
+         "manufacturer": "Fabricante",
+         "manufacturerPlaceholder": "Introduce el fabricante",
+         "mode": "Modo del Localizador",
+         "refreshInterval": "Intervalo de Actualización",
+         "refreshIntervalPlaceholder": "20-999",
+         "refreshUnit": "Unidad de Actualización",
+         "assignedVehicle": "Vehículo Asignado",
+         "vehicleName": "Nombre",
+         "vehicleModel": "Modelo",
+         "vehicleLicensePlate": "Matrícula"
+      },
+      "status": {
+         "active": "Activo",
+         "inactive": "Inactivo"
+      },
+      "mode": {
+         "tracking": "Rastreo",
+         "monitoring": "Monitorización de Audio",
+         "gprs": "Datos GPRS",
+         "sms": "Datos SMS",
+         "sleep_time": "Suspensión (Basado en Tiempo)",
+         "sleep_shock": "Suspensión (Basado en Movimiento)",
+         "sleep_deep": "Suspensión Profunda"
+      },
+      "refreshUnit": {
+         "s": "Segundos",
+         "m": "Minutos",
+         "h": "Horas"
+      },
+      "connection": {
+         "online": "En línea",
+         "offline": "Desconectado"
+      },
+      "lastSeen": {
+         "justNow": "Ahora mismo",
+         "minutesAgo": "min atrás",
+         "hoursAgo": "h atrás",
+         "daysAgo": "d atrás",
+         "never": "Nunca"
+      },
+      "dialogs": {
+         "createTitle": "Añadir Nuevo Localizador",
+         "createButton": "Crear Localizador",
+         "viewTitle": "Detalles del Localizador",
+         "editTitle": "Editar Localizador",
+         "updateButton": "Actualizar Localizador",
+         "deleteButton": "Eliminar Localizador"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "deviceId": "ID del Dispositivo",
+         "trackerName": "Nombre del Localizador",
+         "vehicle": "Vehículo",
+         "manufacturer": "Fabricante",
+         "connection": "Conexión",
+         "status": "Estado",
+         "lastSeen": "Visto por Última Vez",
+         "created": "Creado",
+         "unknown": "Desconocido"
+      },
+      "filters": {
+         "filterByStatus": "Filtrar por estado...",
+         "filterByConnection": "Filtrar por conexión..."
+      },
+      "validation": {
+         "deviceIdRequired": "El ID del dispositivo es obligatorio",
+         "nameMinLength": "El nombre del localizador debe tener al menos 2 caracteres",
+         "vehicleRequired": "El vehículo es obligatorio"
+      }
+   },
+   "analytics": {
+      "success": {
+         "vehicleUsageReport": "Informe de uso de vehículos generado exitosamente",
+         "fuelConsumptionReport": "Informe de consumo de combustible generado exitosamente",
+         "operatorPerformanceReport": "Informe de rendimiento del operador generado exitosamente",
+         "fieldOperationsReport": "Informe de operaciones de campo generado exitosamente",
+         "maintenanceSchedule": "Programa de mantenimiento recuperado exitosamente"
+      },
+      "errors": {
+         "insufficientData": "Datos insuficientes disponibles para generar el informe solicitado",
+         "invalidDateRange": "Rango de fechas inválido especificado para el informe",
+         "generationFailed": "Falló la generación del informe. Por favor, inténtalo de nuevo"
+      }
+   },
+   "maintenance": {
+      "success": {
+         "retrieved": "Registro de mantenimiento recuperado con éxito",
+         "created": "Registro de mantenimiento creado con éxito",
+         "updated": "Registro de mantenimiento actualizado con éxito",
+         "deleted": "Registro de mantenimiento eliminado con éxito",
+         "allDeleted": "Todos los registros de mantenimiento han sido eliminados",
+         "statusUpdated": "Estado de mantenimiento actualizado con éxito",
+         "completed": "Mantenimiento completado con éxito",
+         "overdueMarked": "Registros de mantenimiento vencidos marcados con éxito",
+         "bulkUpdated": "Registros de mantenimiento actualizados en lote con éxito"
+      },
+      "errors": {
+         "notFound": "Registro de mantenimiento no encontrado",
+         "invalidType": "Tipo de mantenimiento inválido especificado",
+         "invalidStatus": "Estado de mantenimiento inválido especificado",
+         "invalidDueHours": "Las horas de vencimiento deben ser un número positivo válido",
+         "invalidCost": "El costo debe ser un número positivo válido",
+         "dueHoursPastCurrent": "Las horas de vencimiento no pueden ser menores o iguales a las horas actuales del vehículo",
+         "cannotModifyCompleted": "No se pueden modificar registros de mantenimiento completados",
+         "cannotDeleteInProgress": "No se pueden eliminar registros de mantenimiento en progreso",
+         "alreadyCompleted": "El registro de mantenimiento ya está completado",
+         "cannotCompleteCancelled": "No se puede completar mantenimiento cancelado",
+         "invalidStatusTransition": "Transición de estado inválida de {{from}} a {{to}}",
+         "duplicateMaintenanceExists": "Ya existe un registro de mantenimiento similar para este vehículo",
+         "noMaintenancesSelected": "No se seleccionaron registros de mantenimiento para la operación en lote",
+         "noMaintenancesToDelete": "No se encontraron registros de mantenimiento para eliminar",
+         "cannotDeleteInProgressExists": "No se pueden eliminar todos los registros - algunos registros de mantenimiento están en progreso"
+      },
+      "validation": {
+         "vehicleRequired": "El vehículo es requerido",
+         "titleMinLength": "El título debe tener al menos 2 caracteres"
+      },
+      "types": {
+         "scheduled": "Programado",
+         "repair": "Reparación",
+         "inspection": "Inspección",
+         "oil_change": "Cambio de aceite",
+         "filter_change": "Cambio de filtro",
+         "other": "Otro"
+      },
+      "statuses": {
+         "scheduled": "Programado",
+         "in_progress": "En progreso",
+         "completed": "Completado",
+         "cancelled": "Cancelado",
+         "overdue": "Vencido"
+      },
+      "form": {
+         "vehicle": "Vehículo",
+         "type": "Tipo de mantenimiento",
+         "title": "Título",
+         "titlePlaceholder": "Ingrese el título del mantenimiento",
+         "status": "Estado",
+         "dueHours": "Horas de vencimiento",
+         "dueHoursPlaceholder": "Ingrese las horas de vencimiento",
+         "cost": "Costo",
+         "costPlaceholder": "Ingrese el costo del mantenimiento",
+         "notes": "Notas",
+         "notesPlaceholder": "Ingrese notas del mantenimiento (opcional)"
+      },
+      "dialogs": {
+         "createTitle": "Crear nuevo registro de mantenimiento",
+         "createButton": "Crear mantenimiento",
+         "viewTitle": "Detalles del registro de mantenimiento",
+         "editTitle": "Editar registro de mantenimiento",
+         "updateButton": "Actualizar mantenimiento",
+         "deleteButton": "Eliminar mantenimiento"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "title": "Título",
+         "vehicle": "Vehículo",
+         "type": "Tipo",
+         "status": "Estado",
+         "dueHours": "Horas de vencimiento",
+         "cost": "Costo",
+         "createdAt": "Fecha de creación"
+      },
+      "filters": {
+         "searchByTitle": "Buscar por título...",
+         "searchByVehicle": "Buscar por vehículo...",
+         "filterByStatus": "Filtrar por estado...",
+         "filterByType": "Filtrar por tipo..."
+      },
+      "status": {
+         "scheduled": "Programado",
+         "in_progress": "En progreso",
+         "completed": "Completado",
+         "cancelled": "Cancelado",
+         "overdue": "Vencido"
+      },
+      "type": {
+         "scheduled": "Programado",
+         "repair": "Reparación",
+         "inspection": "Inspección",
+         "oil_change": "Cambio de aceite",
+         "filter_change": "Cambio de filtro",
+         "other": "Otro"
+      },
+      "units": {
+         "currency": "€"
+      }
+   },
+   "alerts": {
+      "success": {
+         "retrieved": "Alertas recuperadas con éxito",
+         "created": "Alerta creada con éxito",
+         "updated": "Alerta actualizada con éxito",
+         "deleted": "Alerta eliminada con éxito",
+         "allDeleted": "Todas las alertas han sido eliminadas",
+         "statusUpdated": "Estado de alerta actualizado con éxito",
+         "acknowledged": "Alerta reconocida con éxito",
+         "resolved": "Alerta resuelta con éxito",
+         "dismissed": "Alerta descartada con éxito",
+         "bulkUpdated": "Alertas actualizadas en lote con éxito",
+         "resolvedDeleted": "Alertas resueltas eliminadas con éxito",
+         "maintenanceAlertsGenerated": "Alertas de mantenimiento generadas con éxito"
+      },
+      "errors": {
+         "notFound": "Alerta no encontrada",
+         "invalidType": "Tipo de alerta inválido especificado",
+         "invalidStatus": "Estado de alerta inválido especificado",
+         "invalidPriority": "Prioridad de alerta inválida especificada",
+         "invalidTitle": "El título de la alerta debe tener al menos 2 caracteres",
+         "invalidMessage": "El mensaje de la alerta debe tener al menos 5 caracteres",
+         "cannotModifyResolved": "No se pueden modificar alertas resueltas",
+         "cannotDeleteActive": "No se pueden eliminar alertas activas",
+         "duplicateActiveAlert": "Ya existe una alerta activa de este tipo para este objetivo",
+         "noAlertsSelected": "No se seleccionaron alertas para la operación en lote",
+         "noAlertsToDelete": "No se encontraron alertas para eliminar",
+         "invalidStatusTransition": "Transición de estado inválida de {{from}} a {{to}}",
+         "atLeastOneTargetRequired": "Debe especificarse al menos un objetivo (vehículo, operador o usuario)"
+      },
+      "validation": {
+         "titleMinLength": "El título debe tener al menos 2 caracteres",
+         "messageMinLength": "El mensaje debe tener al menos 5 caracteres"
+      },
+      "types": {
+         "maintenance": "Mantenimiento",
+         "fuel": "Combustible",
+         "security": "Seguridad",
+         "operational": "Operacional",
+         "system": "Sistema"
+      },
+      "priorities": {
+         "low": "Baja",
+         "medium": "Media",
+         "high": "Alta",
+         "critical": "Crítica"
+      },
+      "statuses": {
+         "active": "Activa",
+         "read": "Leída",
+         "resolved": "Resuelta",
+         "dismissed": "Descartada"
+      },
+      "form": {
+         "type": "Tipo de alerta",
+         "priority": "Prioridad",
+         "title": "Título",
+         "titlePlaceholder": "Ingrese el título de la alerta",
+         "message": "Mensaje",
+         "messagePlaceholder": "Ingrese el mensaje de la alerta",
+         "status": "Estado",
+         "vehicle": "Vehículo (Opcional)",
+         "vehiclePlaceholder": "Seleccionar un vehículo",
+         "operator": "Operador (Opcional)",
+         "operatorPlaceholder": "Seleccionar un operador"
+      },
+      "dialogs": {
+         "createTitle": "Crear nueva alerta",
+         "createButton": "Crear alerta",
+         "viewTitle": "Detalles de la alerta",
+         "editTitle": "Editar alerta",
+         "updateButton": "Actualizar alerta",
+         "deleteButton": "Eliminar alerta"
+      },
+      "table": {
+         "selectAll": "Seleccionar todo",
+         "selectRow": "Seleccionar fila",
+         "id": "ID",
+         "title": "Título",
+         "type": "Tipo",
+         "priority": "Prioridad",
+         "status": "Estado",
+         "vehicle": "Vehículo",
+         "operator": "Operador",
+         "createdAt": "Fecha de creación",
+         "readAt": "Fecha de lectura"
+      },
+      "filters": {
+         "searchByTitle": "Buscar por título...",
+         "searchByVehicle": "Buscar por vehículo...",
+         "filterByStatus": "Filtrar por estado...",
+         "filterByType": "Filtrar por tipo...",
+         "filterByPriority": "Filtrar por prioridad..."
+      }
+   },
+   "validation": {
+      "general": {
+         "requiredFieldMissing": "Falta un campo obligatorio",
+         "invalidDateFormat": "Formato de fecha inválido proporcionado",
+         "invalidTimeFormat": "Formato de hora inválido proporcionado",
+         "invalidNumericValue": "Valor numérico inválido proporcionado",
+         "valueOutOfRange": "El valor está fuera del rango aceptable"
+      },
+      "formats": {
+         "invalidSerialNumber": "Formato de número de serie inválido",
+         "invalidLicensePlate": "Formato de matrícula inválido",
+         "invalidPhoneNumber": "Formato de número de teléfono inválido",
+         "invalidEmail": "Formato de dirección de correo electrónico inválido",
+         "invalidLicenseNumber": "Formato de número de licencia inválido"
+      }
+   },
+   "dashboard": {
+      "widgets": {
+         "totalLiters": "Total Litros",
+         "totalFields": "Total Campos",
+         "activeVehicles": "Vehículos Activos",
+         "operationsToday": "Operaciones Hoy",
+         "totalOperators": "Total Operadores",
+         "completedOperations": "Operaciones Completadas",
+         "totalWorkHours": "Total Horas de Trabajo",
+         "totalCost": "Costo Total"
+      },
+      "cards": {
+         "recentOperations": {
+            "title": "Operaciones Completadas Recientemente",
+            "noOperations": "No se encontraron operaciones completadas recientemente",
+            "errorLoadingData": "Error al cargar las operaciones completadas recientemente"
+         }
+      },
+      "success": {
+         "widgetsRetrieved": "Widgets del panel recuperados exitosamente"
+      }
+   },
+   "language": {
+      "success": {
+         "preferenceUpdated": "Preferencia de idioma actualizada exitosamente",
+         "preferenceRetrieved": "Preferencia de idioma recuperada exitosamente"
+      },
+      "errors": {
+         "invalid": "Idioma especificado inválido"
+      }
+   },
+   "common": {
+      "notAvailable": "N/D",
+      "invalidDate": "Fecha inválida",
+      "loading": "Cargando...",
+      "loadingCreate": "Creando...",
+      "loadingUpdate": "Actualizando...",
+      "loadingDelete": "Eliminando...",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "edit": "Editar",
+      "view": "Ver",
+      "create": "Crear",
+      "update": "Actualizar",
+      "actions": "Acciones",
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "confirm": "Confirmar"
+   },
+   "status": {
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "pending": "Pendiente",
+      "cancelled": "Cancelado",
+      "maintenance": "Mantenimiento",
+      "retired": "Retirado",
+      "approved": "Aprobado",
+      "rejected": "Rechazado",
+      "processing": "Procesando",
+      "completed": "Completado",
+      "draft": "Borrador",
+      "published": "Publicado",
+      "planned": "Planificado",
+      "suspended": "Suspendido",
+      "deleted": "Eliminado",
+      "archived": "Archivado",
+      "revoked": "Revocado",
+      "expired": "Expirado"
+   },
+   "navigation": {
+      "dashboard": "Panel",
+      "fields": "Campos",
+      "vehicles": "Vehículos",
+      "operations": "Operaciones",
+      "operators": "Operadores",
+      "refuel": "Repostaje",
+      "maintenance": "Mantenimiento",
+      "alerts": "Alertas",
+      "trackers": "Localizadores",
+      "users": "Usuarios",
+      "roles": "Roles",
+      "settings": "Configuración",
+      "logout": "Cerrar Sesión"
+   }
+}

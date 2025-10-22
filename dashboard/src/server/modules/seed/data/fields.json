@@ -1,0 +1,38 @@
+[
+  {
+    "id": "FL01",
+    "name": "North Field Alpha",
+    "area": "45.8",
+    "description": "Primary grain production field with excellent drainage and fertile loam soil. Ideal for corn and wheat rotation with GPS-mapped boundaries."
+  },
+  {
+    "id": "FL02",
+    "name": "South Meadow",
+    "area": "32.4",
+    "description": "Organic-certified field with natural grass coverage, suitable for sustainable farming practices and livestock grazing. Recent soil tests show optimal pH."
+  },
+  {
+    "id": "FL03",
+    "name": "East Valley Field",
+    "area": "67.2",
+    "description": "Large-scale cultivation area with center-pivot irrigation system. Perfect for high-yield crop production and mechanized operations. Recently expanded."
+  },
+  {
+    "id": "FL04",
+    "name": "West Ridge Plot",
+    "area": "28.9",
+    "description": "Elevated field with excellent sun exposure and natural windbreak. Ideal for specialty crops and experimental farming techniques."
+  },
+  {
+    "id": "FL05",
+    "name": "Central Prairie",
+    "area": "89.6",
+    "description": "Expansive flat terrain ideal for large-scale operations. Well-suited for cash crops and efficient equipment movement with minimal slope variation."
+  },
+  {
+    "id": "FL06",
+    "name": "River Bottom Field",
+    "area": "41.3",
+    "description": "Rich alluvial soil near water source with high productivity potential. Natural moisture retention and protected from prevailing winds."
+  }
+]
